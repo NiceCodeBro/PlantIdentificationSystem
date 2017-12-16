@@ -5,12 +5,14 @@
 {% block content %}
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="file" name="myfile">
+     <p>Flower: <input type="file" name="myfile"><br></p>
+     <p>Leaf:<input type="file" name="myfile2"><br></p>
+     <p>Entire:<input type="file" name="myfile3"><br></p>
     <button type="submit">Upload</button>
   </form>
 
   {% if uploaded_file_url %}
-    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+    <p>Results: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
   {% endif %}
 
   <p><a href="{% url 'home' %}">Return to home</a></p>
