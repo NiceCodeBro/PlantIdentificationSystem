@@ -505,56 +505,57 @@ def dataFusionMethod1():
 
 	new_dict = {}
 	for i in range(0,5):
-		if alexnetFlowerClassId[i] in new_dict.keys():
-			temp = new_dict[ alexnetFlowerClassId[i] ]
-			new_dict[ alexnetFlowerClassId[i] ] = float(temp) +  float(alexnetFlowerProbs[i])
-		else:
-			new_dict[ alexnetFlowerClassId[i] ] = float(alexnetFlowerProbs[i])
-		if googlenetFlowerClassId[i] in new_dict.keys():
-			temp = new_dict[ googlenetFlowerClassId[i] ]
-			new_dict[ googlenetFlowerClassId[i] ] = float(temp) +  float(googlenetFlowerProbs[i])
-		else:
-			new_dict[ googlenetFlowerClassId[i] ] = float(googlenetFlowerProbs[i])
-		if caffenetFlowerClassId[i] in new_dict.keys():
-			temp = new_dict[ caffenetFlowerClassId[i] ]
-			new_dict[ caffenetFlowerClassId[i] ] = float(temp) +  float(caffenetFlowerProbs[i])
-		else:
-			new_dict[ caffenetFlowerClassId[i] ] = float(caffenetFlowerProbs[i])
+		if(alexnetFlowerClassId != []):
+			if alexnetFlowerClassId[i] in new_dict.keys():
+				temp = new_dict[ alexnetFlowerClassId[i] ]
+				new_dict[ alexnetFlowerClassId[i] ] = float(temp) +  float(alexnetFlowerProbs[i])
+			else:
+				new_dict[ alexnetFlowerClassId[i] ] = float(alexnetFlowerProbs[i])
+			if googlenetFlowerClassId[i] in new_dict.keys():
+				temp = new_dict[ googlenetFlowerClassId[i] ]
+				new_dict[ googlenetFlowerClassId[i] ] = float(temp) +  float(googlenetFlowerProbs[i])
+			else:
+				new_dict[ googlenetFlowerClassId[i] ] = float(googlenetFlowerProbs[i])
+			if caffenetFlowerClassId[i] in new_dict.keys():
+				temp = new_dict[ caffenetFlowerClassId[i] ]
+				new_dict[ caffenetFlowerClassId[i] ] = float(temp) +  float(caffenetFlowerProbs[i])
+			else:
+				new_dict[ caffenetFlowerClassId[i] ] = float(caffenetFlowerProbs[i])
 
 
-
-		if alexnetLeafClassId[i] in new_dict.keys():
-			temp = new_dict[ alexnetLeafClassId[i] ]
-			new_dict[ alexnetLeafClassId[i] ] = float(temp) +  float(alexnetLeafProbs[i])
-		else:
-			new_dict[ alexnetLeafClassId[i] ] = float(alexnetLeafProbs[i])
-		if googlenetLeafClassId[i] in new_dict.keys():
-			temp = new_dict[ googlenetLeafClassId[i] ]
-			new_dict[ googlenetLeafClassId[i] ] = float(temp) +  float(googlenetLeafProbs[i])
-		else:
-			new_dict[ googlenetLeafClassId[i] ] = float(googlenetLeafProbs[i])
-		if caffenetLeafClassId[i] in new_dict.keys():
-			temp = new_dict[ caffenetLeafClassId[i] ]
-			new_dict[ caffenetLeafClassId[i] ] = float(temp) +  float(caffenetLeafProbs[i])
-		else:
-			new_dict[ caffenetLeafClassId[i] ] = float(caffenetLeafProbs[i])
-
-
-		if alexnetEntireClassId[i] in new_dict.keys():
-			temp = new_dict[ alexnetEntireClassId[i] ]
-			new_dict[ alexnetEntireClassId[i] ] = float(temp) +  float(alexnetEntireProbs[i])
-		else:
-			new_dict[ alexnetEntireClassId[i] ] = float(alexnetEntireProbs[i])
-		if googlenetEntireClassId[i] in new_dict.keys():
-			temp = new_dict[ googlenetEntireClassId[i] ]
-			new_dict[ googlenetEntireClassId[i] ] = float(temp) +  float(googlenetEntireProbs[i])
-		else:
-			new_dict[ googlenetEntireClassId[i] ] = float(googlenetEntireProbs[i])
-		if caffenetEntireClassId[i] in new_dict.keys():
-			temp = new_dict[ caffenetEntireClassId[i] ]
-			new_dict[ caffenetEntireClassId[i] ] = float(temp) +  float(caffenetEntireProbs[i])
-		else:
-			new_dict[ caffenetEntireClassId[i] ] = float(caffenetEntireProbs[i])
+		if(alexnetLeafClassId != []):
+			if alexnetLeafClassId[i] in new_dict.keys():
+				temp = new_dict[ alexnetLeafClassId[i] ]
+				new_dict[ alexnetLeafClassId[i] ] = float(temp) +  float(alexnetLeafProbs[i])
+			else:
+				new_dict[ alexnetLeafClassId[i] ] = float(alexnetLeafProbs[i])
+			if googlenetLeafClassId[i] in new_dict.keys():
+				temp = new_dict[ googlenetLeafClassId[i] ]
+				new_dict[ googlenetLeafClassId[i] ] = float(temp) +  float(googlenetLeafProbs[i])
+			else:
+				new_dict[ googlenetLeafClassId[i] ] = float(googlenetLeafProbs[i])
+			if caffenetLeafClassId[i] in new_dict.keys():
+				temp = new_dict[ caffenetLeafClassId[i] ]
+				new_dict[ caffenetLeafClassId[i] ] = float(temp) +  float(caffenetLeafProbs[i])
+			else:
+				new_dict[ caffenetLeafClassId[i] ] = float(caffenetLeafProbs[i])
+		
+		if(alexnetEntireClassId != []):
+			if alexnetEntireClassId[i] in new_dict.keys():
+				temp = new_dict[ alexnetEntireClassId[i] ]
+				new_dict[ alexnetEntireClassId[i] ] = float(temp) +  float(alexnetEntireProbs[i])
+			else:
+				new_dict[ alexnetEntireClassId[i] ] = float(alexnetEntireProbs[i])
+			if googlenetEntireClassId[i] in new_dict.keys():
+				temp = new_dict[ googlenetEntireClassId[i] ]
+				new_dict[ googlenetEntireClassId[i] ] = float(temp) +  float(googlenetEntireProbs[i])
+			else:
+				new_dict[ googlenetEntireClassId[i] ] = float(googlenetEntireProbs[i])
+			if caffenetEntireClassId[i] in new_dict.keys():
+				temp = new_dict[ caffenetEntireClassId[i] ]
+				new_dict[ caffenetEntireClassId[i] ] = float(temp) +  float(caffenetEntireProbs[i])
+			else:
+				new_dict[ caffenetEntireClassId[i] ] = float(caffenetEntireProbs[i])
 
 
 	
@@ -593,55 +594,56 @@ def dataFusionMethod2():
 	googlenetnet_dict = {}
 	caffenet_dict = {}
 	for i in range(0,5):
-		if alexnetFlowerClassId[i] in alexnet_dict.keys():
-			temp = alexnet_dict[ alexnetFlowerClassId[i] ]
-			alexnet_dict[ alexnetFlowerClassId[i] ] = float(temp) +  float(alexnetFlowerProbs[i])
-		else:
-			alexnet_dict[ alexnetFlowerClassId[i] ] = float(alexnetFlowerProbs[i])
-		if googlenetFlowerClassId[i] in googlenetnet_dict.keys():
-			temp = googlenetnet_dict[ googlenetFlowerClassId[i] ]
-			googlenetnet_dict[ googlenetFlowerClassId[i] ] = float(temp) +  float(googlenetFlowerProbs[i])
-		else:
-			googlenetnet_dict[ googlenetFlowerClassId[i] ] = float(googlenetFlowerProbs[i])
-		if caffenetFlowerClassId[i] in caffenet_dict.keys():
-			temp = caffenet_dict[ caffenetFlowerClassId[i] ]
-			caffenet_dict[ caffenetFlowerClassId[i] ] = float(temp) +  float(caffenetFlowerProbs[i])
-		else:
-			caffenet_dict[ caffenetFlowerClassId[i] ] = float(caffenetFlowerProbs[i])
+		if(alexnetFlowerClassId != []):
+			if alexnetFlowerClassId[i] in alexnet_dict.keys():
+				temp = alexnet_dict[ alexnetFlowerClassId[i] ]
+				alexnet_dict[ alexnetFlowerClassId[i] ] = float(temp) +  float(alexnetFlowerProbs[i])
+			else:
+				alexnet_dict[ alexnetFlowerClassId[i] ] = float(alexnetFlowerProbs[i])
+			if googlenetFlowerClassId[i] in googlenetnet_dict.keys():
+				temp = googlenetnet_dict[ googlenetFlowerClassId[i] ]
+				googlenetnet_dict[ googlenetFlowerClassId[i] ] = float(temp) +  float(googlenetFlowerProbs[i])
+			else:
+				googlenetnet_dict[ googlenetFlowerClassId[i] ] = float(googlenetFlowerProbs[i])
+			if caffenetFlowerClassId[i] in caffenet_dict.keys():
+				temp = caffenet_dict[ caffenetFlowerClassId[i] ]
+				caffenet_dict[ caffenetFlowerClassId[i] ] = float(temp) +  float(caffenetFlowerProbs[i])
+			else:
+				caffenet_dict[ caffenetFlowerClassId[i] ] = float(caffenetFlowerProbs[i])
 
+		if(alexnetLeafClassId != []):
+			if alexnetLeafClassId[i] in alexnet_dict.keys():
+				temp = alexnet_dict[ alexnetLeafClassId[i] ]
+				alexnet_dict[ alexnetLeafClassId[i] ] = float(temp) +  float(alexnetLeafProbs[i])
+			else:
+				alexnet_dict[ alexnetLeafClassId[i] ] = float(alexnetLeafProbs[i])
+			if googlenetLeafClassId[i] in googlenetnet_dict.keys():
+				temp = googlenetnet_dict[ googlenetLeafClassId[i] ]
+				googlenetnet_dict[ googlenetLeafClassId[i] ] = float(temp) +  float(googlenetLeafProbs[i])
+			else:
+				googlenetnet_dict[ googlenetLeafClassId[i] ] = float(googlenetLeafProbs[i])
+			if caffenetLeafClassId[i] in caffenet_dict.keys():
+				temp = caffenet_dict[ caffenetLeafClassId[i] ]
+				caffenet_dict[ caffenetLeafClassId[i] ] = float(temp) +  float(caffenetLeafProbs[i])
+			else:
+				caffenet_dict[ caffenetLeafClassId[i] ] = float(caffenetLeafProbs[i])
 
-		if alexnetLeafClassId[i] in alexnet_dict.keys():
-			temp = alexnet_dict[ alexnetLeafClassId[i] ]
-			alexnet_dict[ alexnetLeafClassId[i] ] = float(temp) +  float(alexnetLeafProbs[i])
-		else:
-			alexnet_dict[ alexnetLeafClassId[i] ] = float(alexnetLeafProbs[i])
-		if googlenetLeafClassId[i] in googlenetnet_dict.keys():
-			temp = googlenetnet_dict[ googlenetLeafClassId[i] ]
-			googlenetnet_dict[ googlenetLeafClassId[i] ] = float(temp) +  float(googlenetLeafProbs[i])
-		else:
-			googlenetnet_dict[ googlenetLeafClassId[i] ] = float(googlenetLeafProbs[i])
-		if caffenetLeafClassId[i] in caffenet_dict.keys():
-			temp = caffenet_dict[ caffenetLeafClassId[i] ]
-			caffenet_dict[ caffenetLeafClassId[i] ] = float(temp) +  float(caffenetLeafProbs[i])
-		else:
-			caffenet_dict[ caffenetLeafClassId[i] ] = float(caffenetLeafProbs[i])
-
-
-		if alexnetEntireClassId[i] in alexnet_dict.keys():
-			temp = alexnet_dict[ alexnetEntireClassId[i] ]
-			alexnet_dict[ alexnetEntireClassId[i] ] = float(temp) +  float(alexnetEntireProbs[i])
-		else:
-			alexnet_dict[ alexnetEntireClassId[i] ] = float(alexnetEntireProbs[i])
-		if googlenetEntireClassId[i] in googlenetnet_dict.keys():
-			temp = googlenetnet_dict[ googlenetEntireClassId[i] ]
-			googlenetnet_dict[ googlenetEntireClassId[i] ] = float(temp) +  float(googlenetEntireProbs[i])
-		else:
-			googlenetnet_dict[ googlenetEntireClassId[i] ] = float(googlenetEntireProbs[i])
-		if caffenetEntireClassId[i] in caffenet_dict.keys():
-			temp = caffenet_dict[ caffenetEntireClassId[i] ]
-			caffenet_dict[ caffenetEntireClassId[i] ] = float(temp) +  float(caffenetEntireProbs[i])
-		else:
-			caffenet_dict[ caffenetEntireClassId[i] ] = float(caffenetEntireProbs[i])
+		if(alexnetEntireClassId != []):
+			if alexnetEntireClassId[i] in alexnet_dict.keys():
+				temp = alexnet_dict[ alexnetEntireClassId[i] ]
+				alexnet_dict[ alexnetEntireClassId[i] ] = float(temp) +  float(alexnetEntireProbs[i])
+			else:
+				alexnet_dict[ alexnetEntireClassId[i] ] = float(alexnetEntireProbs[i])
+			if googlenetEntireClassId[i] in googlenetnet_dict.keys():
+				temp = googlenetnet_dict[ googlenetEntireClassId[i] ]
+				googlenetnet_dict[ googlenetEntireClassId[i] ] = float(temp) +  float(googlenetEntireProbs[i])
+			else:
+				googlenetnet_dict[ googlenetEntireClassId[i] ] = float(googlenetEntireProbs[i])
+			if caffenetEntireClassId[i] in caffenet_dict.keys():
+				temp = caffenet_dict[ caffenetEntireClassId[i] ]
+				caffenet_dict[ caffenetEntireClassId[i] ] = float(temp) +  float(caffenetEntireProbs[i])
+			else:
+				caffenet_dict[ caffenetEntireClassId[i] ] = float(caffenetEntireProbs[i])
 
 
 	
@@ -694,55 +696,56 @@ def dataFusionMethod3():
 	leaf_dict = {}
 	entire_dict = {}
 	for i in range(0,5):
-		if alexnetFlowerClassId[i] in flower_dict.keys():
-			temp = flower_dict[ alexnetFlowerClassId[i] ]
-			flower_dict[ alexnetFlowerClassId[i] ] = float(temp) +  float(alexnetFlowerProbs[i])
-		else:
-			flower_dict[ alexnetFlowerClassId[i] ] = float(alexnetFlowerProbs[i])
-		if googlenetFlowerClassId[i] in flower_dict.keys():
-			temp = flower_dict[ googlenetFlowerClassId[i] ]
-			flower_dict[ googlenetFlowerClassId[i] ] = float(temp) +  float(googlenetFlowerProbs[i])
-		else:
-			flower_dict[ googlenetFlowerClassId[i] ] = float(googlenetFlowerProbs[i])
-		if caffenetFlowerClassId[i] in flower_dict.keys():
-			temp = flower_dict[ caffenetFlowerClassId[i] ]
-			flower_dict[ caffenetFlowerClassId[i] ] = float(temp) +  float(caffenetFlowerProbs[i])
-		else:
-			flower_dict[ caffenetFlowerClassId[i] ] = float(caffenetFlowerProbs[i])
+		if(alexnetFlowerClassId != []):
+			if alexnetFlowerClassId[i] in flower_dict.keys():
+				temp = flower_dict[ alexnetFlowerClassId[i] ]
+				flower_dict[ alexnetFlowerClassId[i] ] = float(temp) +  float(alexnetFlowerProbs[i])
+			else:
+				flower_dict[ alexnetFlowerClassId[i] ] = float(alexnetFlowerProbs[i])
+			if googlenetFlowerClassId[i] in flower_dict.keys():
+				temp = flower_dict[ googlenetFlowerClassId[i] ]
+				flower_dict[ googlenetFlowerClassId[i] ] = float(temp) +  float(googlenetFlowerProbs[i])
+			else:
+				flower_dict[ googlenetFlowerClassId[i] ] = float(googlenetFlowerProbs[i])
+			if caffenetFlowerClassId[i] in flower_dict.keys():
+				temp = flower_dict[ caffenetFlowerClassId[i] ]
+				flower_dict[ caffenetFlowerClassId[i] ] = float(temp) +  float(caffenetFlowerProbs[i])
+			else:
+				flower_dict[ caffenetFlowerClassId[i] ] = float(caffenetFlowerProbs[i])
+		if(alexnetLeafClassId != []):
+			if alexnetLeafClassId[i] in leaf_dict.keys():
+				temp = leaf_dict[ alexnetLeafClassId[i] ]
+				leaf_dict[ alexnetLeafClassId[i] ] = float(temp) +  float(alexnetLeafProbs[i])
+			else:
+				leaf_dict[ alexnetLeafClassId[i] ] = float(alexnetLeafProbs[i])
+			if googlenetLeafClassId[i] in leaf_dict.keys():
+				temp = leaf_dict[ googlenetLeafClassId[i] ]
+				leaf_dict[ googlenetLeafClassId[i] ] = float(temp) +  float(googlenetLeafProbs[i])
+			else:
+				leaf_dict[ googlenetLeafClassId[i] ] = float(googlenetLeafProbs[i])
+			if caffenetLeafClassId[i] in leaf_dict.keys():
+				temp = leaf_dict[ caffenetLeafClassId[i] ]
+				leaf_dict[ caffenetLeafClassId[i] ] = float(temp) +  float(caffenetLeafProbs[i])
+			else:
+				leaf_dict[ caffenetLeafClassId[i] ] = float(caffenetLeafProbs[i])
 
-		if alexnetLeafClassId[i] in leaf_dict.keys():
-			temp = leaf_dict[ alexnetLeafClassId[i] ]
-			leaf_dict[ alexnetLeafClassId[i] ] = float(temp) +  float(alexnetLeafProbs[i])
-		else:
-			leaf_dict[ alexnetLeafClassId[i] ] = float(alexnetLeafProbs[i])
-		if googlenetLeafClassId[i] in leaf_dict.keys():
-			temp = leaf_dict[ googlenetLeafClassId[i] ]
-			leaf_dict[ googlenetLeafClassId[i] ] = float(temp) +  float(googlenetLeafProbs[i])
-		else:
-			leaf_dict[ googlenetLeafClassId[i] ] = float(googlenetLeafProbs[i])
-		if caffenetLeafClassId[i] in leaf_dict.keys():
-			temp = leaf_dict[ caffenetLeafClassId[i] ]
-			leaf_dict[ caffenetLeafClassId[i] ] = float(temp) +  float(caffenetLeafProbs[i])
-		else:
-			leaf_dict[ caffenetLeafClassId[i] ] = float(caffenetLeafProbs[i])
 
-
-
-		if alexnetEntireClassId[i] in entire_dict.keys():
-			temp = entire_dict[ alexnetEntireClassId[i] ]
-			entire_dict[ alexnetEntireClassId[i] ] = float(temp) +  float(alexnetEntireProbs[i])
-		else:
-			entire_dict[ alexnetEntireClassId[i] ] = float(alexnetEntireProbs[i])
-		if googlenetEntireClassId[i] in entire_dict.keys():
-			temp = entire_dict[ googlenetEntireClassId[i] ]
-			entire_dict[ googlenetEntireClassId[i] ] = float(temp) +  float(googlenetEntireProbs[i])
-		else:
-			entire_dict[ googlenetEntireClassId[i] ] = float(googlenetEntireProbs[i])
-		if caffenetEntireClassId[i] in entire_dict.keys():
-			temp = entire_dict[ caffenetEntireClassId[i] ]
-			entire_dict[ caffenetEntireClassId[i] ] = float(temp) +  float(caffenetEntireProbs[i])
-		else:
-			entire_dict[ caffenetEntireClassId[i] ] = float(caffenetEntireProbs[i])
+		if(alexnetEntireClassId != []):
+			if alexnetEntireClassId[i] in entire_dict.keys():
+				temp = entire_dict[ alexnetEntireClassId[i] ]
+				entire_dict[ alexnetEntireClassId[i] ] = float(temp) +  float(alexnetEntireProbs[i])
+			else:
+				entire_dict[ alexnetEntireClassId[i] ] = float(alexnetEntireProbs[i])
+			if googlenetEntireClassId[i] in entire_dict.keys():
+				temp = entire_dict[ googlenetEntireClassId[i] ]
+				entire_dict[ googlenetEntireClassId[i] ] = float(temp) +  float(googlenetEntireProbs[i])
+			else:
+				entire_dict[ googlenetEntireClassId[i] ] = float(googlenetEntireProbs[i])
+			if caffenetEntireClassId[i] in entire_dict.keys():
+				temp = entire_dict[ caffenetEntireClassId[i] ]
+				entire_dict[ caffenetEntireClassId[i] ] = float(temp) +  float(caffenetEntireProbs[i])
+			else:
+				entire_dict[ caffenetEntireClassId[i] ] = float(caffenetEntireProbs[i])
 
 
 	
@@ -750,9 +753,12 @@ def dataFusionMethod3():
 	#print new_dict
 
 	#print str(' ')
-	flower_dict = sorted(flower_dict.items(), key=operator.itemgetter(1))[::-1][:5]
-	leaf_dict = sorted(leaf_dict.items(), key=operator.itemgetter(1))[::-1][:5]
-	entire_dict = sorted(entire_dict.items(), key=operator.itemgetter(1))[::-1][:5]
+	if(alexnetFlowerClassId != []):
+		flower_dict = sorted(flower_dict.items(), key=operator.itemgetter(1))[::-1][:5]
+	if(alexnetLeafClassId != []):
+		leaf_dict = sorted(leaf_dict.items(), key=operator.itemgetter(1))[::-1][:5]
+	if(alexnetEntireClassId != []):
+		entire_dict = sorted(entire_dict.items(), key=operator.itemgetter(1))[::-1][:5]
 
 	#print str(' ')	
 	#print flower_dict
@@ -770,15 +776,37 @@ def dataFusionMethod3():
 	#print sorted_alexnet[0][0] 
 	#print sorted_alexnet[0][1] 
 
-	if flower_dict[0][1] > leaf_dict[0][1]  and flower_dict[0][1] > entire_dict[0][1]    :
+	if(alexnetFlowerClassId != [] and alexnetLeafClassId != [] and alexnetEntireClassId != []):
+		if flower_dict[0][1] >= leaf_dict[0][1]  and flower_dict[0][1] >= entire_dict[0][1]    :
+			return flower_dict
+		elif leaf_dict[0][1] >= flower_dict[0][1]  and leaf_dict[0][1] >= entire_dict[0][1]    :
+			return leaf_dict
+		elif entire_dict[0][1] >= leaf_dict[0][1]  and entire_dict[0][1] >= flower_dict[0][1]    :
+			return entire_dict
+		else:
+			return flower_dict
+	if(alexnetFlowerClassId == [] and alexnetLeafClassId != [] and alexnetEntireClassId != []):
+		if  leaf_dict[0][1] >= entire_dict[0][1]:
+			return leaf_dict
+		else:
+			return entire_dict
+	if(alexnetFlowerClassId != [] and alexnetLeafClassId == [] and alexnetEntireClassId != []):
+		if  flower_dict[0][1] >= entire_dict[0][1]:
+			return flower_dict
+		else:
+			return entire_dict
+	if(alexnetFlowerClassId != [] and alexnetLeafClassId != [] and alexnetEntireClassId == []):
+		if  flower_dict[0][1] >= leaf_dict[0][1]:
+			return flower_dict
+		else:
+			return leaf_dict
+	if(alexnetFlowerClassId != []):
 		return flower_dict
-	elif leaf_dict[0][1] > flower_dict[0][1]  and leaf_dict[0][1] > entire_dict[0][1]    :
+	if(alexnetLeafClassId != []):
 		return leaf_dict
-	elif entire_dict[0][1] > leaf_dict[0][1]  and entire_dict[0][1] > flower_dict[0][1]    :
+	if(alexnetEntireClassId != []):
 		return entire_dict
-	else:
-		return flower_dict
-	#return sorted_x[::-1][:5]
+		#return sorted_x[::-1][:5]
  
 
 #print(dataFusionMethod1())
@@ -805,15 +833,18 @@ def dataFusionController(flowerPath,leafPath,entirePath):
 	global caffenetLeafProbs
 	global caffenetEntireClassId
 	global caffenetEntireProbs
-	alexnetFlowerClassId, alexnetFlowerProbs = giveAlexnetFlowerResults(flowerPath)
-	googlenetFlowerClassId, googlenetFlowerProbs = giveGooglenetFlowerResults(flowerPath)
-	alexnetLeafClassId, alexnetLeafProbs = giveAlexnetLeafResults(leafPath)
-	googlenetLeafClassId, googlenetLeafProbs = giveGooglenetLeafResults(leafPath)
-	alexnetEntireClassId, alexnetEntireProbs = giveAlexnetEntireResults(entirePath)
-	googlenetEntireClassId, googlenetEntireProbs = giveGooglenetEntireResults(entirePath)
-	caffenetFlowerClassId, caffenetFlowerProbs = giveCaffenetEntireResults(flowerPath)
-	caffenetLeafClassId, caffenetLeafProbs = giveCaffenetEntireResults(leafPath)
-	caffenetEntireClassId, caffenetEntireProbs = giveCaffenetEntireResults(entirePath)
+	if(flowerPath != 'false'):
+		alexnetFlowerClassId, alexnetFlowerProbs = giveAlexnetFlowerResults(flowerPath)
+		googlenetFlowerClassId, googlenetFlowerProbs = giveGooglenetFlowerResults(flowerPath)
+		caffenetFlowerClassId, caffenetFlowerProbs = giveCaffenetEntireResults(flowerPath)
+	if(leafPath != 'false'):
+		alexnetLeafClassId, alexnetLeafProbs = giveAlexnetLeafResults(leafPath)
+		googlenetLeafClassId, googlenetLeafProbs = giveGooglenetLeafResults(leafPath)
+		caffenetLeafClassId, caffenetLeafProbs = giveCaffenetEntireResults(leafPath)
+	if(entirePath != 'false'):
+		alexnetEntireClassId, alexnetEntireProbs = giveAlexnetEntireResults(entirePath)
+		googlenetEntireClassId, googlenetEntireProbs = giveGooglenetEntireResults(entirePath)
+		caffenetEntireClassId, caffenetEntireProbs = giveCaffenetEntireResults(entirePath)
 	
 
 	result1 = dataFusionMethod1()
@@ -854,35 +885,239 @@ def dataFusionController(flowerPath,leafPath,entirePath):
 
 
 
+
+def dataFusionController2(flowerPath,leafPath,entirePath):
+	global alexnetFlowerClassId 
+	global alexnetFlowerProbs 
+	global googlenetFlowerClassId 
+	global googlenetFlowerProbs 
+	global alexnetLeafClassId 
+	global alexnetLeafProbs 
+	global googlenetLeafClassId 
+	global googlenetLeafProbs 
+	global alexnetEntireClassId 
+	global alexnetEntireProbs 
+	global googlenetEntireClassId 
+	global googlenetEntireProbs 
+	global caffenetFlowerClassId
+	global caffenetFlowerProbs
+	global caffenetLeafClassId
+	global caffenetLeafProbs
+	global caffenetEntireClassId
+	global caffenetEntireProbs
+	if(flowerPath != 'false'):
+		alexnetFlowerClassId, alexnetFlowerProbs = giveAlexnetFlowerResults(flowerPath)
+		googlenetFlowerClassId, googlenetFlowerProbs = giveGooglenetFlowerResults(flowerPath)
+		caffenetFlowerClassId, caffenetFlowerProbs = giveCaffenetEntireResults(flowerPath)
+	if(leafPath != 'false'):
+		alexnetLeafClassId, alexnetLeafProbs = giveAlexnetLeafResults(leafPath)
+		googlenetLeafClassId, googlenetLeafProbs = giveGooglenetLeafResults(leafPath)
+		caffenetLeafClassId, caffenetLeafProbs = giveCaffenetEntireResults(leafPath)
+	if(entirePath != 'false'):
+		alexnetEntireClassId, alexnetEntireProbs = giveAlexnetEntireResults(entirePath)
+		googlenetEntireClassId, googlenetEntireProbs = giveGooglenetEntireResults(entirePath)
+		caffenetEntireClassId, caffenetEntireProbs = giveCaffenetEntireResults(entirePath)
+	
+
+	result1 = {}
+	result2 = {}
+	result3 = {}
+	r1 = dataFusionMethod1()
+	r2= dataFusionMethod2()
+	r3 = dataFusionMethod3() 
+
+
+	for i in range(0,5):
+		if r1[i][0] in result1.keys():
+			temp = result1[ r1[i][0] ]
+			result1[ r1[i][0] ] = float(temp) +  float(r1[i][1])
+		else:
+			result1[ r1[i][0] ] = float(r1[i][1])
+		if r2[i][0] in result2.keys():
+			temp = result2[ r2[i][0] ]
+			result2[ r2[i][0] ] = float(temp) +  float(r2[i][1])
+		else:
+			result2[ r2[i][0] ] = float(r2[i][1])
+		if r3[i][0] in result3.keys():
+			temp = result3[ r3[i][0] ]
+			result3[ r3[i][0] ] = float(temp) +  float(r3[i][1])
+		else:
+			result3[ r3[i][0] ] = float(r3[i][1])
+
+
+
+
+	sorted_results1 = sorted(result1.items(), key=operator.itemgetter(1))[::-1][:5]
+	sorted_results2 = sorted(result2.items(), key=operator.itemgetter(1))[::-1][:5]
+	sorted_results3 = sorted(result3.items(), key=operator.itemgetter(1))[::-1][:5]
+
+
+	return sorted_results1,sorted_results2,sorted_results3
+	#return dataFusionMethod1(),dataFusionMethod2(),dataFusionMethod3()
+
 def findTops():
-	test = open("/home/msd/Downloads/qwert.txt")
+	test = open("/home/msd/Downloads/coupledClassesTxts/leafEntireClass.txt")
 	count = 0
 	accuracy = 0
-	for i in range(0,638):
+	accuracy2 = 0
+	for i in range(0,172):
 
 		token = test.readline()
 		expected = token.split()[0]
-		flower = token.split()[1] + str('.jpg')
-		leaf = token.split()[2] + str('.jpg')
-		entire = token.split()[3] + str('.jpg')
+
+		flower = 'false'
+		leaf = 'false'
+		entire = 'false'
+		if(token.split()[1] != 'false'):
+			flower = str('/home/msd/Desktop/DatasetPrepairing/AllSnaps/') + token.split()[1] + str('.jpg')
+		if(token.split()[2] != 'false'):
+			leaf = str('/home/msd/Desktop/DatasetPrepairing/AllSnaps/') + token.split()[2] + str('.jpg')
+		if(token.split()[3] != 'false'):
+			entire = str('/home/msd/Desktop/DatasetPrepairing/AllSnaps/') + token.split()[3] + str('.jpg')
 		
 
-		result = dataFusionController('/home/msd/Desktop/DatasetPrepairing/AllSnaps/' +str(flower),'/home/msd/Desktop/DatasetPrepairing/AllSnaps/'+str(leaf),'/home/msd/Desktop/DatasetPrepairing/AllSnaps/'+str(entire))
+		result = dataFusionController(str(flower),str(leaf),str(entire))
 
 		count = count +  1
 
-		#for i in result:
-		#	if(str(i[0]) == str(expected)):
-		#	    accuracy += 1
-		if str(result[0][0]) == str(expected):
-			accuracy += 1		
-		print "Accuracy", "%" + str((accuracy / count)*100), str(count)
+		for i in result:
+			if(str(i[0]) == str(expected)):
+			   accuracy += 1
+			   break
+		
+		if(result[0][0] == str(expected)):
+			accuracy2 += 1
+		print "Accuracy", "%" + str((accuracy / count)*100), "%" + str((accuracy2 / count)*100), str(count)
 
 
 
 
-	print "Accuracy", "%" + str((accuracy / 638)*100)
+	print "Accuracy", "%" + str((accuracy / 172)*100)
+def findTops2():
+	test = open("/home/msd/Downloads/qwert.txt")
+	count = 0
+	accuracy1_result1 = 0
+	accuracy2_result1 = 0
+	accuracy1_result2 = 0
+	accuracy2_result2 = 0
+	accuracy1_result3 = 0
+	accuracy2_result3 = 0
 
-findTops()
+	rangee = 638
+	for i in range(0,rangee):
 
-#print(dataFusionController('/home/msd/Desktop/DatasetPrepairing/AllSnaps/3568.jpg','/home/msd/Desktop/DatasetPrepairing/AllSnaps/13484.jpg','/home/msd/Desktop/DatasetPrepairing/AllSnaps/4626.jpg'))
+		token = test.readline()
+		expected = flower.get(token.split()[1])
+
+		flower2 = 'false'
+		leaf2 = 'false'
+		entire2 = 'false'
+
+		flower2 = token.split()[0]
+	
+
+
+		result1,result2,result3 = dataFusionController2(str(flower2),str(leaf2),str(entire2))
+		
+		#print result1, result2, result3
+		count = count +  1
+		for i in result1:
+			if(str(i[0]) == str(expected)):
+			   accuracy1_result1 += 1
+			   break
+		
+		if(result1[0][0] == str(expected)):
+			accuracy2_result1 += 1
+
+		for i in result2:
+			if(str(i[0]) == str(expected)):
+			   accuracy1_result2 += 1
+			   break
+		
+		if(result2[0][0] == str(expected)):
+			accuracy2_result2 += 1
+
+		for i in result3:
+			if(str(i[0]) == str(expected)):
+			   accuracy1_result3 += 1
+			   break
+		
+		if(result3[0][0] == str(expected)):
+			accuracy2_result3 += 1
+
+
+
+
+		print "Accuracy", "Yontem1 top5 %" + str((accuracy1_result1 / count)*100), "Top1 %" + str((accuracy2_result1 / count)*100), "     Yontem2 top5 %" + str((accuracy1_result2 / count)*100), "Top1 %" + str((accuracy2_result2 / count)*100), "     Yontem3 top5 %" + str((accuracy1_result3 / count)*100), "Top1 %" + str((accuracy2_result3 / count)*100), "   Count", count
+
+
+
+
+	print "Accuracy", "%" + str((accuracy / rangee)*100)
+def findTops3():
+	test = open("/home/msd/Desktop/caffenetentire/entireTestMain.txt")
+	count = 0
+	accuracy1_result1 = 0
+	accuracy2_result1 = 0
+	accuracy1_result2 = 0
+	accuracy2_result2 = 0
+	accuracy1_result3 = 0
+	accuracy2_result3 = 0
+
+	rangee = 1495
+	for i in range(0,rangee):
+
+		token = test.readline()
+		expected = token.split()[1]
+
+		flower2 = 'false'
+		leaf2 = 'false'
+		entire2 = 'false'
+
+		#flower2 =  str('/home/msd/Desktop/DatasetPrepairing/AllSnaps/') + token.split()[1] + str('.jpg')
+		#leaf2 = str('/home/msd/Desktop/DatasetPrepairing/AllSnaps/') + token.split()[2] + str('.jpg')
+		#entire2 = str('/home/msd/Desktop/DatasetPrepairing/AllSnaps/') + token.split()[3] + str('.jpg')
+		entire2 = token.split()[0]
+
+
+		result1,result2,result3 = dataFusionController2(str(flower2),str(leaf2),str(entire2))
+		
+		#print result1, result2, result3
+		count = count +  1
+		for i in result1:
+			if(str(i[0]) == entire.get(str(expected))):
+			   accuracy1_result1 += 1
+			   break
+		
+		if(result1[0][0] == entire.get(str(expected))):
+			accuracy2_result1 += 1
+
+		for i in result2:
+			if(str(i[0]) == entire.get(str(expected))):
+			   accuracy1_result2 += 1
+			   break
+		
+		if(result2[0][0] == entire.get(str(expected))):
+			accuracy2_result2 += 1
+
+		for i in result3:
+			if(str(i[0]) == entire.get(str(expected))):
+			   accuracy1_result3 += 1
+			   break
+		
+		if(result3[0][0] == entire.get(str(expected))):
+			accuracy2_result3 += 1
+ 
+
+
+
+		print "Accuracy", "Yontem1 top5 %" + str((accuracy1_result1 / count)*100), "Top1 %" + str((accuracy2_result1 / count)*100), "     Yontem2 top5 %" + str((accuracy1_result2 / count)*100), "Top1 %" + str((accuracy2_result2 / count)*100), "     Yontem3 top5 %" + str((accuracy1_result3 / count)*100), "Top1 %" + str((accuracy2_result3 / count)*100), "   Count", count, str('flower-entr')
+
+
+
+
+	print "Accuracy", "%" + str((accuracy / rangee)*100)
+
+#findTops2()
+#findTops3()
+#print(dataFusionController('/home/msd/Desktop/DatasetPrepairing/AllSnaps/3568.jpg','/home/msd/Desktop/DatasetPrepairing/AllSnaps/13484.jpg','false'))

@@ -27,7 +27,7 @@ def simple_upload(request):
 
 
 	
-	absoulutePath = '/home/msd/PlantIdentificationSystem/'
+	absoulutePath = '/home/msd/simple-file-upload/'
 	a = classification.dataFusionController(absoulutePath+uploaded_file_url,absoulutePath+uploaded_file_url2,absoulutePath+uploaded_file_url3)
 
         return render(request, 'core/simple_upload.html', {
@@ -47,4 +47,4 @@ def model_form_upload(request):
         form = DocumentForm()
     return render(request, 'core/model_form_upload.html', {
         'form': form
-})
+    })
