@@ -1,0 +1,11 @@
+BEGIN;
+--
+-- Create model Plant
+--
+CREATE TABLE "core_plant" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "classId" integer NOT NULL, "plantName" varchar(50) NOT NULL);
+--
+-- Create model PlantSearchOccur
+--
+CREATE TABLE "core_plantsearchoccur" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "plantName" varchar(50) NOT NULL, "occurance" integer NOT NULL);
+COMMIT;
+
